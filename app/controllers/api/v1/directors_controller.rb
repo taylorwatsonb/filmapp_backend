@@ -1,7 +1,12 @@
 class Api::V1::DirectorsController < ApplicationController
     def index 
         directors = Director.all 
-        render json: directors
+       # options = {
+            # include associated movie
+            #include: [:movie]
+        #}
+        # render json: directors
+        render json: DirectorSerializer.new(directors)
     end
 
     def create 
