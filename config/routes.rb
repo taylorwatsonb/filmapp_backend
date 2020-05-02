@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :directors, only: [:index]
+      resources :directors, only: [:index, :create]
   end
 end 
 
